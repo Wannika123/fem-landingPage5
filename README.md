@@ -42,7 +42,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub repo](https://github.com/Wannika123/fem-landingPage5)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Netlify](https://66324f0b45d576dbe64ba152--velvety-basbousa-fa7cc1.netlify.app/)
 
 ## My process
 
