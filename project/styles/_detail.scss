@@ -1,0 +1,86 @@
+@import './utils/colors';
+@import './utils/functions';
+
+.detail {
+    margin-top: rem(120);
+    @include desktop-version {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        gap: 30px;
+        margin-top: rem(202);
+    }
+}
+
+.detail-topic {
+    text-align: center;
+    @include tablet-version {
+        display: flex;
+        align-items: center;
+        margin-left: 55px;
+    }
+    @include desktop-version {
+        text-align: left;
+        display: block;
+        margin: 0;
+    }
+    &-img {
+        width: 160px;
+        height: 164px;
+        transform: scale(0.75);
+        border-radius: 45px;
+        background-color: $dark-blue;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin: 0 auto;
+        margin-top: rem(36);
+        @include tablet-version {
+            margin: 0;
+        }
+        @include desktop-version {
+            margin: 0;
+            transform: unset;
+        }
+    }
+    .passions {
+        background-image: url(../assets/illustration-passions.svg);
+    }    
+    .freedom {
+        background-image: url(../assets/illustration-financial-freedom.svg);
+    }    
+    .lifestyle {
+        background-image: url(../assets/illustration-lifestyle.svg);
+    }   
+    .work-anywhere {
+        background-image: url(../assets/illustration-work-anywhere.svg);
+    }
+    &-text {
+        text-align: center;
+        @include tablet-version {
+            text-align: left;
+            margin-left: 55px;
+        }
+        @include desktop-version {
+            margin-left: 0;
+        }
+        h3 {
+            margin-bottom: rem(11);
+            margin-top: rem(16);
+            @include tablet-version {
+                margin-top: 0;
+            }
+            @include desktop-version {
+                margin-bottom: rem(23);
+                margin-top: rem(48);
+            }
+        }
+    }
+}
+
+.wave-layout {
+    @include tablet-version {
+        transform: translate(-58px, 0);
+    }
+    @include desktop-version {
+        transform: translate(0, 48px);
+    }
+}

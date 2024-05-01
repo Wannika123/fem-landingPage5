@@ -1,0 +1,55 @@
+@import './utils/colors';
+@import './utils/functions';
+
+.intro {
+    position: relative;
+    width: unset;
+    margin-top: 70px;
+    @include desktop-version {
+        margin-top: 114px;
+    }
+}
+
+.intro-bg {
+    &-mobile {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        @include tablet-version {
+            display: none;
+        }
+    }
+    &-desktop {
+        display: none;
+        @include tablet-version {
+            display: flex;
+            min-width: 100vw;
+            justify-content: center;
+            gap: 96.5px;
+            overflow: hidden;
+        }
+    }
+}
+
+.intro-text {
+    text-align: center;
+    width: 87%;
+    margin: 0 auto;
+    @include tablet-version {
+        position: absolute;
+        width: rem(457);
+        left: 0;
+        right: 0;
+        top: 50px;
+    }
+    @include desktop-version {
+        width: rem(540);
+        top: 88px;
+    }
+    img {
+        margin-top: 32px;
+        @include desktop-version {
+            margin-top: 64px;
+        }
+    }
+}

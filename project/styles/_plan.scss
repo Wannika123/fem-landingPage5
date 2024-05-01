@@ -1,0 +1,109 @@
+@import './utils/colors';
+@import './utils/functions';
+
+.plan {
+    margin-top: rem(144);
+    @include desktop-version {
+        margin-top: rem(202);
+    }
+}
+
+.plan-intro {
+    text-align: center;
+    margin: 0 auto;
+    @include desktop-version {
+        max-width: 33.75rem;
+    }
+    h2 {
+        font-size: rem(24);
+        margin-bottom: rem(25);
+        @include desktop-version {
+            font-size: rem(32);
+        }
+    }
+}
+
+.plan-types-section {
+    margin-top: rem(79);
+    @include desktop-version {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: rem(30);
+        margin-top: rem(105);
+    }
+    .plan-type {
+        width: 100%;
+        border-radius: 8px;
+        position: relative;
+        margin: 0 auto;
+        @include tablet-version {
+            width: rem(445);
+        }
+        &-icon {
+            position: absolute;
+        }
+        h4 {
+            margin-bottom: rem(19);
+            font-size: rem(18);
+        }
+        .price {
+            font-size: rem(40);
+            padding-top: rem(24);
+            font-weight: 800;
+            .per-month {
+                font-size: rem(15);
+                opacity: 0.6;
+                font-weight: 500;
+            }
+        }
+        ul {
+            list-style: none;
+            margin-top: rem(8);
+            li {
+                display: flex;
+                align-items: center;
+                margin-top: rem(12);
+                span {
+                    margin-left: rem(15);
+                }
+            }
+        }
+    }
+}
+
+.free-plan {
+    background-color: $dark-blue;
+    color: $white;
+    padding: rem(48) 30px rem(32) 30px;
+    @include tablet-version {
+        padding: rem(48) 38px rem(48) 38px;
+    } 
+    .plan-type-icon {
+        top: -23px;
+    }
+    p {
+        color: $white;
+        opacity: 0.7;
+    }
+}
+
+.paid-plan {
+    margin-top: rem(65) !important;
+    background-color: $cyan;
+    color: $dark-bg;
+    padding: rem(61) 30px rem(32) 30px;
+    @include tablet-version {
+        padding: rem(61) 38px rem(61) 38px;
+    } 
+    @include desktop-version {
+        margin-top: 0 !important;
+    }
+    .plan-type-icon {
+        top: -33px;
+    }
+    p {
+        color: $dark-bg;
+        opacity: 0.7;
+    }
+}

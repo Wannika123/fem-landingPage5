@@ -1,0 +1,17 @@
+@use "sass:math";
+
+@function rem($pixels) {
+	@return (math.div($pixels, 16)) * 1rem;
+}
+
+@mixin tablet-version {
+    @media (min-width: 43rem) {
+        @content;
+    }
+}
+
+@mixin desktop-version {
+    @media (min-width: 75rem) {
+        @content;
+    }
+}

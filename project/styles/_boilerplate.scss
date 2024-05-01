@@ -1,0 +1,36 @@
+@import './utils/colors';
+@import './utils/functions';
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $dark-bg;
+    font-family: "Manrope", sans-serif;
+}
+
+header {
+    text-align: center;
+    padding-top: 40px;
+    @include tablet-version {
+        text-align: left;
+        padding: 48px 0 0 39px;
+    }
+    @include desktop-version {
+        padding: 81px 0 0 165px;
+    }
+}
+
+section {
+    width: 87%;
+    margin: 0 auto;
+    @include tablet-version {
+        width: 575px;
+    }
+    @include desktop-version {
+        width: calc(950px + 10rem);
+    }
+}

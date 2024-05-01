@@ -1,0 +1,89 @@
+@import './utils/colors';
+@import './utils/functions';
+
+.get-notified {
+    width: unset;
+    text-align: center;
+    background-image: url(../assets/bg-footer-squiggle.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: rem(144);
+    margin-bottom: rem(120);
+    .text-div {
+        width: 70%;
+        margin: 0 auto;
+        @include tablet-version {
+            padding-top: 16px;
+        }
+        @include desktop-version {
+            padding-top: 52px;
+        }
+        h2 {
+            font-size: rem(24);
+            @include desktop-version {
+                font-size: rem(32);
+            }
+        }
+    }
+    form {
+        width: 87%;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: rem(30);
+        @include desktop-version {
+            margin-top: rem(42);
+        }
+        .input-div {
+            position: relative;
+            @include tablet-version {
+                display: inline-block;
+            }
+            input {
+                height: 3rem;
+                width: 100%;
+                background-color: $dark-blue;
+                color: $white;
+                border: none;
+                border-radius: 1.5rem;
+                padding-left: 18px;
+                font-size: rem(15);
+                font-weight: 800;
+                &::placeholder {
+                    color: $gray;
+                }
+                @include tablet-version {
+                    width: 20rem;
+                }
+            }
+            #warning-text {
+                position: absolute;
+                margin-left: 18px;
+                margin-top: rem(4);
+                font-size: rem(12);
+                color: $red;
+                display: none;
+            }
+        }
+        button {
+            height: 3rem;
+            width: 100%;
+            background-color: $cyan;
+            color: $dark-blue;
+            border: none;
+            border-radius: 1.5rem;
+            margin-top: rem(24);
+            font-size: rem(15);
+            font-weight: 800;
+            &:hover {
+                color: $white;
+                background-color: transparent;
+                border: 2px solid $cyan;
+            }
+            @include tablet-version {
+                width: 8.75rem;
+                margin-top: 0;
+                margin-left: rem(16);
+            }
+        }
+    }
+}
